@@ -267,6 +267,7 @@ const CATEGORIAS = [
   { id: "caixas", nome: "Caixas e cestas" },
   { id: "canecas", nome: "Canecas" },
   { id: "infantil", nome: "Infantil" },
+  { id: "professores", nome: "Personalize para qualquer data" },
   { id: "adicionais", nome: "Adicionais e caixotes" }
 ];
 
@@ -312,6 +313,23 @@ const PRODUTOS = [
   { id:"carrinho-encantado", cat:"infantil", nome:"Carrinho Encantado", preco:169.90, frase:"Uma surpresa cor-de-rosa para brincar.",
     descricao:"Carrinho de compras de brinquedo rosa, balão metalizado de coração rosa, chocolates KitKat e Sonho de Valsa, suco The Natural One, wafer Bauducco Duo e biscoitos Mini Oreo. Finalizado com laço rosa." },
 
+  { id:"caneca-cha-carinho", cat:"professores", nome:"Caneca & Chá", preco:59.90, frase:"Um chá quentinho para agradecer.",
+    descricao:"Caneca de cerâmica personalizada com a inicial do nome, 1 chá de camomila Dr. Oetker, 1 bolinho recheado Bauducco e biscoito amanteigado. Em caixa, com detalhe de tecido floral e laço. (Consulte disponibilidade das artes)", textos:INICIAL },
+  { id:"caneca-cha-mimo", cat:"professores", nome:"Caneca Cheia de Mimos", preco:77.90, frase:"Para agradecer com carinho redobrado.",
+    descricao:"Caneca de cerâmica personalizada com a inicial do nome, biscoito amanteigado, 1 Kit Kat, 1 Ouro Branco e 1 chá de camomila Dr. Oetker. Acompanha chaveiro de coração. Em caixote de madeira com laço. (Consulte disponibilidade das artes)", textos:INICIAL },
+  { id:"caneca-sementes-futuro", cat:"professores", nome:"Sementes do Futuro", preco:78.90, frase:"Obrigada por plantar sementes que florescem no futuro.",
+    descricao:"Caneca de cerâmica estampada com a frase \"Obrigada por plantar as sementes que vão florescer no futuro\", biscoito amanteigado, 1 Ferrero Rocher, 1 chá misto Dr. Oetker, 1 bolinho Bauducco e 1 café Baggio. Acompanha chaveiro de coração. Em caixote de madeira com laço. (Consulte disponibilidade das artes)" },
+  { id:"caneca-plantam-sementes", cat:"professores", nome:"Professores Plantam Sementes", preco:79.90, frase:"Sementes que crescem para sempre.",
+    descricao:"Caneca de cerâmica estampada com a frase \"Professores plantam sementes que crescem para sempre\", biscoito amanteigado, 1 barra Talento e 1 bolinho Bauducco. Acompanha chaveiro de coração. Em caixote de madeira com laço. (Consulte disponibilidade das artes)" },
+  { id:"agenda-planner-carinho", cat:"professores", nome:"Agenda com Carinho", preco:79.90, frase:"Um planner para organizar o ano com estilo.",
+    descricao:"Agenda/planner 2027, 1 Kit Kat, lápis, canetas coloridas, pacote de cookies, 1 cappuccino 3 Corações, 1 chá Dr. Oetker e biscoito amanteigado. Em embalagem transparente com laço. (Consulte disponibilidade das artes)" },
+  { id:"agenda-planner-doce", cat:"professores", nome:"Agenda Docinho", preco:82.90, frase:"Páginas em branco e um docinho para começar bem.",
+    descricao:"Agenda/planner 2027, lápis, canetas coloridas, 1 barra Prestígio, biscoitos, 1 cappuccino 3 Corações, 1 chá Dr. Oetker e biscoito amanteigado. Em caixote de madeira com laço. (Consulte disponibilidade das artes)" },
+  { id:"caneca-mora-no-coracao", cat:"professores", nome:"Você Mora no Meu Coração", preco:84.90, frase:"Para quem ensina com o coração.",
+    descricao:"Caneca de cerâmica estampada com coruja e a frase \"Professora, você mora no meu coração\", biscoito amanteigado, 1 bem-casado, 1 café Baggio, 1 chocolate Trento e 1 bolinho Bauducco. Acompanha chaveiro de coração. Em caixote de madeira com laço. (Consulte disponibilidade das artes)" },
+  { id:"caneca-parabens-prof", cat:"professores", nome:"Parabéns pelo Seu Dia", preco:89.90, frase:"Um mimo completo para celebrar quem ensina.",
+    descricao:"Caneca de cerâmica estampada com a frase \"Prof, parabéns pelo seu dia!\", biscoito amanteigado, 1 barra Talento, 1 chá Dr. Oetker e 1 bolinho Bauducco. Acompanha ursinho de pelúcia. Em caixote de madeira com laço. (Consulte disponibilidade das artes)" },
+
   { id:"balao-personalizado", cat:"adicionais", contem:true, nome:"Balão personalizado", preco:null, semCartao:true, frase:"Para deixar qualquer presente ainda mais especial.",
     descricao:"Balão com a frase que você escolher: Feliz Aniversário, Com carinho!, Feliz dia, Parabéns e muito mais. Finalizado com laço de cetim e haste. Pode ser adicionado em qualquer presente do catálogo. Metalizado personalizado R$ 29,90 ou bubble personalizado R$ 64,90.",
     opcoes:[{ nome:"Tipo de balão", valores:["Metalizado","Bubble"], precos:{ "Metalizado":29.90, "Bubble":64.90 } }],
@@ -343,7 +361,15 @@ const FOTOS = {
 "doce-infancia": "img/doce-infancia.webp",
 "alecrim-partilhar": "img/alecrim-partilhar.webp",
 "carrinho-encantado": "img/carrinho-encantado.webp",
-"pausa-mimos": "img/pausa-mimos.webp"
+"pausa-mimos": "img/pausa-mimos.webp",
+"caneca-cha-carinho": "img/caneca-cha-carinho.webp",
+"caneca-cha-mimo": "img/caneca-cha-mimo.webp",
+"caneca-sementes-futuro": "img/caneca-sementes-futuro.webp",
+"caneca-plantam-sementes": "img/caneca-plantam-sementes.webp",
+"agenda-planner-carinho": "img/agenda-planner-carinho.webp",
+"agenda-planner-doce": "img/agenda-planner-doce.webp",
+"caneca-mora-no-coracao": "img/caneca-mora-no-coracao.webp",
+"caneca-parabens-prof": "img/caneca-parabens-prof.webp"
 };
 
 /* ================================================================ */
