@@ -267,8 +267,7 @@ const CATEGORIAS = [
   { id: "caixas", nome: "Caixas e cestas" },
   { id: "canecas", nome: "Canecas" },
   { id: "infantil", nome: "Infantil" },
-  { id: "professores", nome: "Personalize para qualquer data" },
-  { id: "adicionais", nome: "Adicionais e caixotes" }
+  { id: "professores", nome: "Personalize para qualquer data" }
 ];
 
 /* Cardápio de setembro/2026. Somente nome, frase, composição e preço de venda.
@@ -308,11 +307,6 @@ const PRODUTOS = [
     descricao:"Copo infantil com tampa e canudo, 1 Chamyto GO, 1 Toddynho, 1 porção individual de Sucrilhos, 1 Bolinho Bauducco, marshmallows e uma guloseima adicional. Em caixa com laço." },
   { id:"doce-infancia", cat:"infantil", nome:"Doce Infância", preco:139.90, frase:"Pequenas delícias, grandes sorrisos.",
     descricao:"1 Chamyto GO, 1 Toddynho, 1 suco Naturale, 1 Bolinho Bauducco, 1 Fini Beijos de 15 g, 1 Ouro Branco, marshmallows, 1 donut decorado e 1 biscoito Nestlé com chocolate. Em caixa com flores e laço rosa." },
-  { id:"caminhao-alegria", cat:"infantil", nome:"Caminhão da Alegria", preco:169.90, frase:"Diversão que chega de presente.",
-    descricao:"Caminhão de brinquedo com 4 balões, massa de modelar, Fini, Fini Tubes, pirulito grande, tubo de confeitos, chocolate, salgadinho e guloseimas variadas. Finalizado com laço azul." },
-  { id:"carrinho-encantado", cat:"infantil", nome:"Carrinho Encantado", preco:169.90, frase:"Uma surpresa cor-de-rosa para brincar.",
-    descricao:"Carrinho de compras de brinquedo rosa, balão metalizado de coração rosa, chocolates KitKat e Sonho de Valsa, suco The Natural One, wafer Bauducco Duo e biscoitos Mini Oreo. Finalizado com laço rosa." },
-
   { id:"caneca-cha-carinho", cat:"professores", nome:"Caneca & Chá", preco:59.90, frase:"Um chá quentinho para agradecer.",
     descricao:"Caneca de cerâmica personalizada com a inicial do nome, 1 chá de camomila Dr. Oetker, 1 bolinho recheado Bauducco e biscoito amanteigado. Em caixa, com detalhe de tecido floral e laço. (Consulte disponibilidade das artes)", textos:INICIAL },
   { id:"caneca-cha-mimo", cat:"professores", nome:"Caneca Cheia de Mimos", preco:77.90, frase:"Para agradecer com carinho redobrado.",
@@ -321,34 +315,15 @@ const PRODUTOS = [
     descricao:"Caneca de cerâmica estampada com a frase \"Obrigada por plantar as sementes que vão florescer no futuro\", biscoito amanteigado, 1 Ferrero Rocher, 1 chá misto Dr. Oetker, 1 bolinho Bauducco e 1 café Baggio. Acompanha chaveiro de coração. Em caixote de madeira com laço. (Consulte disponibilidade das artes)" },
   { id:"caneca-plantam-sementes", cat:"professores", nome:"Professores Plantam Sementes", preco:79.90, frase:"Sementes que crescem para sempre.",
     descricao:"Caneca de cerâmica estampada com a frase \"Professores plantam sementes que crescem para sempre\", biscoito amanteigado, 1 barra Talento e 1 bolinho Bauducco. Acompanha chaveiro de coração. Em caixote de madeira com laço. (Consulte disponibilidade das artes)" },
-  { id:"agenda-planner-carinho", cat:"professores", nome:"Agenda com Carinho", preco:79.90, frase:"Um planner para organizar o ano com estilo.",
-    descricao:"Agenda/planner 2027, 1 Kit Kat, lápis, canetas coloridas, pacote de cookies, 1 cappuccino 3 Corações, 1 chá Dr. Oetker e biscoito amanteigado. Em embalagem transparente com laço. (Consulte disponibilidade das artes)" },
-  { id:"agenda-planner-doce", cat:"professores", nome:"Agenda Docinho", preco:82.90, frase:"Páginas em branco e um docinho para começar bem.",
-    descricao:"Agenda/planner 2027, lápis, canetas coloridas, 1 barra Prestígio, biscoitos, 1 cappuccino 3 Corações, 1 chá Dr. Oetker e biscoito amanteigado. Em caixote de madeira com laço. (Consulte disponibilidade das artes)" },
   { id:"caneca-mora-no-coracao", cat:"professores", nome:"Você Mora no Meu Coração", preco:84.90, frase:"Para quem ensina com o coração.",
     descricao:"Caneca de cerâmica estampada com coruja e a frase \"Professora, você mora no meu coração\", biscoito amanteigado, 1 bem-casado, 1 café Baggio, 1 chocolate Trento e 1 bolinho Bauducco. Acompanha chaveiro de coração. Em caixote de madeira com laço. (Consulte disponibilidade das artes)" },
   { id:"caneca-parabens-prof", cat:"professores", nome:"Parabéns pelo Seu Dia", preco:89.90, frase:"Um mimo completo para celebrar quem ensina.",
     descricao:"Caneca de cerâmica estampada com a frase \"Prof, parabéns pelo seu dia!\", biscoito amanteigado, 1 barra Talento, 1 chá Dr. Oetker e 1 bolinho Bauducco. Acompanha ursinho de pelúcia. Em caixote de madeira com laço. (Consulte disponibilidade das artes)" },
-
-  { id:"balao-personalizado", cat:"adicionais", contem:true, nome:"Balão personalizado", preco:null, semCartao:true, frase:"Para deixar qualquer presente ainda mais especial.",
-    descricao:"Balão com a frase que você escolher: Feliz Aniversário, Com carinho!, Feliz dia, Parabéns e muito mais. Finalizado com laço de cetim e haste. Pode ser adicionado em qualquer presente do catálogo. Metalizado personalizado R$ 29,90 ou bubble personalizado R$ 64,90.",
-    opcoes:[{ nome:"Tipo de balão", valores:["Metalizado","Bubble"], precos:{ "Metalizado":29.90, "Bubble":64.90 } }],
-    textos:[{ nome:"Frase do balão", placeholder:"Ex.: Feliz aniversário", obrigatorio:true, max:40 }, { nome:"Vai junto com", placeholder:"Qual presente? Ex.: Caixa Bom Dia", obrigatorio:false, max:60 }] },
-  { id:"outros-adicionais", cat:"adicionais", nome:"Outros adicionais", preco:null, semCartao:true, frase:"Mini orquídea natural, Ferrero Rocher e outros chocolates.",
-    descricao:"Também dá para acrescentar mini orquídea natural, Ferrero Rocher e outros chocolates em qualquer presente do catálogo. Conte o que você quer e a Capim Limão responde com o valor pelo WhatsApp.",
-    textos:[{ nome:"O que você quer acrescentar", placeholder:"Ex.: mini orquídea e 3 Ferrero Rocher", obrigatorio:true, max:120 }, { nome:"Vai junto com", placeholder:"Qual presente? Ex.: Erva-Doce", obrigatorio:false, max:60 }] },
-  { id:"caixotes-balao", cat:"adicionais", contem:true, nome:"Caixotes com balão", preco:null, frase:"Um caixote cheio de carinho.",
-    descricao:"Caixote de madeira decorado com papel de seda, laço de cetim e balão personalizado com a frase que você escolher. Pode levar Ferrero Rocher, bombons, chocolates e ursinho de pelúcia. Monte do seu jeito: cores, frase e recheio à escolha.",
-    opcoes:[{ nome:"Tipo de balão", valores:["Metalizado","Bubble"] }, { nome:"Ursinho de pelúcia", valores:["Com ursinho","Sem ursinho"] }],
-    textos:[{ nome:"Frase do balão", placeholder:"Ex.: Te amo", obrigatorio:true, max:40 }, { nome:"Recheio", placeholder:"Ex.: Ferrero Rocher e bombons", obrigatorio:false, max:80 }, { nome:"Cores preferidas", placeholder:"Ex.: rosa e dourado", obrigatorio:false, max:60 }] }
 ];
 
 const FOTOS = {
-"caminhao-alegria": "img/caminhao-alegria.webp",
-"balao-personalizado": "img/balao-personalizado.webp",
 "caneca-personalizada": "img/caneca-personalizada.webp",
 "cafe-coado-afeto": "img/cafe-coado-afeto.webp",
-"caixotes-balao": "img/caixotes-balao.webp",
 "erva-doce": "img/erva-doce.webp",
 "capim-limao": "img/capim-limao.webp",
 "cesta-celebracao": "img/cesta-celebracao.webp",
@@ -360,14 +335,11 @@ const FOTOS = {
 "caixa-doce-afeto": "img/caixa-doce-afeto.webp",
 "doce-infancia": "img/doce-infancia.webp",
 "alecrim-partilhar": "img/alecrim-partilhar.webp",
-"carrinho-encantado": "img/carrinho-encantado.webp",
 "pausa-mimos": "img/pausa-mimos.webp",
 "caneca-cha-carinho": "img/caneca-cha-carinho.webp",
 "caneca-cha-mimo": "img/caneca-cha-mimo.webp",
 "caneca-sementes-futuro": "img/caneca-sementes-futuro.webp",
 "caneca-plantam-sementes": "img/caneca-plantam-sementes.webp",
-"agenda-planner-carinho": "img/agenda-planner-carinho.webp",
-"agenda-planner-doce": "img/agenda-planner-doce.webp",
 "caneca-mora-no-coracao": "img/caneca-mora-no-coracao.webp",
 "caneca-parabens-prof": "img/caneca-parabens-prof.webp"
 };
@@ -382,8 +354,7 @@ const orc = p => p.preco == null && !opcaoComPreco(p);
 const precoItem = (p, escolhas) => { const o = opcaoComPreco(p); if (o){ const v = (escolhas || {})[o.nome]; return v != null && o.precos[v] != null ? o.precos[v] : null; } return p.preco; };
 const precoLinha = l => precoItem(byId(l.id), l.escolhas);
 const precoTexto = p => { if (orc(p)) return "Sob orçamento"; const o = opcaoComPreco(p); if (o) return "Desde " + brl(Math.min(...Object.values(o.precos))); return brl(p.preco); };
-const FOTO_ADICIONAIS = "data:image/svg+xml," + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"><rect width="400" height="500" fill="#E4EBC0"/><g transform="translate(200 230)"><path d="M0 150 C-4 90 -2 40 0 0" stroke="#6F8F3F" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M0 120 C30 100 60 104 80 88 C50 80 20 92 0 120Z" fill="#6F8F3F"/><path d="M0 95 C-30 78 -58 82 -76 66 C-46 58 -18 70 0 95Z" fill="#8FAA5A"/><g fill="#F3D5DA" stroke="#B8646E" stroke-width="3"><ellipse cx="0" cy="-58" rx="30" ry="48"/><ellipse cx="-52" cy="-18" rx="46" ry="28" transform="rotate(-20 -52 -18)"/><ellipse cx="52" cy="-18" rx="46" ry="28" transform="rotate(20 52 -18)"/><ellipse cx="-30" cy="28" rx="24" ry="36" transform="rotate(35 -30 28)"/><ellipse cx="30" cy="28" rx="24" ry="36" transform="rotate(-35 30 28)"/></g><path d="M-16 -8 C-8 -30 8 -30 16 -8 C10 14 -10 14 -16 -8Z" fill="#B8646E"/><circle cx="0" cy="-12" r="7" fill="#F5E6A8"/></g><g transform="translate(300 400)"><circle r="30" fill="#B8893E"/><circle r="30" fill="none" stroke="#8A6424" stroke-width="3" stroke-dasharray="4 5"/></g><g transform="translate(95 410)"><rect x="-34" y="-20" width="68" height="40" rx="6" fill="#5A3A2A"/><path d="M-34 -4 H34 M-12 -20 V20 M12 -20 V20" stroke="#7A5240" stroke-width="3"/></g></svg>`);
-const foto = id => FOTOS[id] || FOTO_ADICIONAIS;
+const foto = id => FOTOS[id];
 const store = {
   get(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
   set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} },
